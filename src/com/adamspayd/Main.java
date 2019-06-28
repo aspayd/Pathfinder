@@ -121,17 +121,6 @@ public class Main extends Canvas implements Runnable {
         g.setColor(Color.black);
 
         if(drawGrid) {
-//            for (int col = 1; col <= height; col++) {
-//                for (int row = 1; row <= width; row++) {
-//                    if (col % gridScale == 0) {
-//                        g.drawLine(0, col, width, col);
-//                    }
-//
-//                    if (row % gridScale == 0) {
-//                        g.drawLine(row, 0, row, height);
-//                    }
-//                }
-//            }
 
             wh.render(g);
 

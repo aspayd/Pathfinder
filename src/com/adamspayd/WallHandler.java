@@ -26,11 +26,10 @@ public class WallHandler {
         this.width = width;
         this.height= height;
         this.scale = scale;
-
+        
+        // Generate the walls
         walls = new ArrayList<>();
-        if(generateWalls(walls)) {
-            System.out.println("Walls generated");
-        } else {
+        if(!generateWalls(walls)) {
             System.out.println("Failed to generate the walls");
         }
 
@@ -71,17 +70,21 @@ public class WallHandler {
         return true;
     }
 
+    /**
+     * Renders the walls in colors according to their type (i.g. start, stop, boundary)
+     *
+     */
     public void render(Graphics g) {
 
         for(Wall wall : walls) {
 
-            for(Wall boundry : boundries) {
-                if(wall.getX() == boundry.getX() && wall.getY() == boundry.getY()) {
-                    wall.setIsBoundry(true);
+            for(Wall boundary : boundries) {
+                if(wall.getX() == boundary.getX() && wall.getY() == boundary.getY()) {
+                    wall.setIsboundary(true);
                 }
             }
 
-            Color color = (wall.isBoundry) ? Color.black : Color.white;
+            Color color = (wall.isboundary) ? Color.black : Color.white;
 
             if(wall.getX() == start.getX() && wall.getY() == start.getY()) {
                 color = Color.green;
@@ -105,12 +108,12 @@ public class WallHandler {
 
         private int x;
         private int y;
-        private boolean isBoundry;
+        private boolean isboundary;
 
-        public Wall(int x, int y, boolean isBoundry) {
+        public Wall(int x, int y, boolean isboundary) {
             this.x = x;
             this.y = y;
-            this.isBoundry = isBoundry;
+            this.isboundary = isboundary;
         }
 
         public int getX() {
@@ -121,12 +124,12 @@ public class WallHandler {
             return y;
         }
 
-        public boolean isBoundry() {
-            return isBoundry;
+        public boolean isboundary() {
+            return isboundary;
         }
 
-        public void setIsBoundry(boolean isBoundry) {
-            this.isBoundry = isBoundry;
+        public void setIsboundary(boolean isboundary) {
+            this.isboundary = isboundary;
         }
     }
 }
