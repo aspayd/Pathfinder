@@ -13,18 +13,21 @@ public class Main extends Canvas implements Runnable {
 
     private Thread thread;
 
-    private Window window;
+    private WallHandler wh;
 
+    private Window window;
     private int winWidth = 514, winHeight = 537;
     private int width = winWidth - 7, height = winHeight - 30;
     private int gridScale = 25;
-    private boolean drawGrid = true;
+    private boolean drawGrid;
 
     private boolean running = false;
     private String title = "A* Pathfinder";
     private String version = "v1.0";
 
     public Main() {
+        wh = new WallHandler(width, height, gridScale);
+
         window = new Window(winWidth, winHeight, title + " " + version, this);
         start();
     }
@@ -34,6 +37,7 @@ public class Main extends Canvas implements Runnable {
         thread.start();
 
         running = true;
+        drawGrid = true;
     }
 
     public synchronized void stop() {
@@ -117,17 +121,19 @@ public class Main extends Canvas implements Runnable {
         g.setColor(Color.black);
 
         if(drawGrid) {
-            for (int col = 1; col <= height; col++) {
-                for (int row = 1; row <= width; row++) {
-                    if (col % gridScale == 0) {
-                        g.drawLine(0, col, width, col);
-                    }
+//            for (int col = 1; col <= height; col++) {
+//                for (int row = 1; row <= width; row++) {
+//                    if (col % gridScale == 0) {
+//                        g.drawLine(0, col, width, col);
+//                    }
+//
+//                    if (row % gridScale == 0) {
+//                        g.drawLine(row, 0, row, height);
+//                    }
+//                }
+//            }
 
-                    if (row % gridScale == 0) {
-                        g.drawLine(row, 0, row, height);
-                    }
-                }
-            }
+            wh.render(g);
 
             drawGrid = false;
         }
