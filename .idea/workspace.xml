@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a51f20b6-8c18-4075-a84d-46e8e4543533" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/adamspayd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/WallHandler$Wall.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/WallHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/adamspayd/WallHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/WallHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/adamspayd/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/Window.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/adamspayd/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="133" selection-end-column="15" />
+            <state relative-caret-position="310">
+              <caret line="131" column="23" lean-forward="true" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Main#0" />
@@ -40,11 +37,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/adamspayd/WallHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1041">
-              <caret line="118" column="39" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
+            <state relative-caret-position="225">
+              <caret line="44" column="103" selection-start-line="44" selection-start-column="103" selection-end-line="44" selection-end-column="103" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2335#2336#0" expanded="true" />
+                <element signature="e#2776#2777#0" expanded="true" />
                 <element signature="e#2900#2901#0" expanded="true" />
                 <element signature="e#2949#2950#0" expanded="true" />
               </folding>
@@ -55,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/adamspayd/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-51">
               <caret column="13" selection-start-column="13" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -237,8 +234,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/adamspayd/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="133" selection-end-column="15" />
+        <state relative-caret-position="310">
+          <caret line="131" column="23" lean-forward="true" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Main#0" />
@@ -248,7 +245,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/adamspayd/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-51">
           <caret column="13" selection-start-column="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -258,11 +255,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/adamspayd/WallHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1041">
-          <caret line="118" column="39" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
+        <state relative-caret-position="225">
+          <caret line="44" column="103" selection-start-line="44" selection-start-column="103" selection-end-line="44" selection-end-column="103" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2335#2336#0" expanded="true" />
+            <element signature="e#2776#2777#0" expanded="true" />
             <element signature="e#2900#2901#0" expanded="true" />
             <element signature="e#2949#2950#0" expanded="true" />
           </folding>

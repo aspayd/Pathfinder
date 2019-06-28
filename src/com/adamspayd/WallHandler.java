@@ -18,6 +18,8 @@ public class WallHandler {
 
     private List<Wall> walls;
     private List<Wall> boundries;
+    private Wall start;
+    private Wall stop;
 
     public WallHandler(int width, int height, int scale) {
 
@@ -33,13 +35,14 @@ public class WallHandler {
         }
 
         boundries = new ArrayList<>();
-        boundries.add(new Wall(100, 100, true));
-        boundries.add(new Wall(125, 100, true));
-        boundries.add(new Wall(150, 100, true));
-        boundries.add(new Wall(175, 100, true));
-        boundries.add(new Wall(175, 75, true));
+        boundries.add(new Wall(100, 150, true));
+        boundries.add(new Wall(125, 150, true));
+        boundries.add(new Wall(150, 150, true));
+        boundries.add(new Wall(175, 150, true));
+        boundries.add(new Wall(175, 125, true));
 
-        System.out.println(walls.size());
+        start = new Wall(0, 0, false);
+        stop = new Wall(walls.get(walls.size() - 1).getX(), walls.get(walls.size() - 1).getY(), false);
     }
 
     /**
@@ -79,6 +82,12 @@ public class WallHandler {
             }
 
             Color color = (wall.isBoundry) ? Color.black : Color.white;
+
+            if(wall.getX() == start.getX() && wall.getY() == start.getY()) {
+                color = Color.green;
+            } else if(wall.getX() == stop.getX() && wall.getY() == stop.getY()) {
+                color = Color.red;
+            }
 
             g.setColor(color);
             g.fillRect(wall.x, wall.y, this.scale, this.scale);
