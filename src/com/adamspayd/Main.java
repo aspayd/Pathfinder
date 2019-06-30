@@ -36,8 +36,6 @@ public class Main extends Canvas implements Runnable {
 
         wh = new WallHandler(width, height, gridScale);
 
-        System.out.println("Width: " + width + ", Height: " + height +  ", Window Width: " + window.getWidth() + ", Window Height: " + window.getHeight());
-
         start();
     }
 
