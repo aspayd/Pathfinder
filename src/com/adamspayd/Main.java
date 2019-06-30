@@ -16,8 +16,10 @@ public class Main extends Canvas implements Runnable {
     private WallHandler wh;
 
     private Window window;
-    private int winWidth = 514, winHeight = 537;
-    private int width = winWidth - 7, height = winHeight - 30;
+
+    private int winWidth = 500, winHeight = 500;
+    private int width, height;
+
     private int gridScale = 25;
     private boolean drawGrid;
 
@@ -26,9 +28,16 @@ public class Main extends Canvas implements Runnable {
     private String version = "v1.0";
 
     public Main() {
-        wh = new WallHandler(width, height, gridScale);
 
         window = new Window(winWidth, winHeight, title + " " + version, this);
+
+        width = window.getWidth();
+        height = window.getHeight();
+
+        wh = new WallHandler(width, height, gridScale);
+
+        System.out.println("Width: " + width + ", Height: " + height +  ", Window Width: " + window.getWidth() + ", Window Height: " + window.getHeight());
+
         start();
     }
 

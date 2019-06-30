@@ -20,7 +20,11 @@ public class Window extends Canvas {
 
     public Window(int width, int height, String title, Main main) {
 
-        Dimension frameSize = new Dimension(width, height);
+        // Add 14 and 37 to compensate for the top bar on the window
+        this.width = width + 14;
+        this.height = height + 37;
+
+        Dimension frameSize = new Dimension(this.width, this.height);
 
         frame = new JFrame(title);
 
@@ -35,5 +39,13 @@ public class Window extends Canvas {
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+    }
+
+    public int getWidth() {
+        return this.width - 7;
+    }
+
+    public int getHeight() {
+        return this.height - 30;
     }
 }
