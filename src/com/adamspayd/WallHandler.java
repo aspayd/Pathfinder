@@ -99,13 +99,18 @@ public class WallHandler {
         for(Wall wall : this.walls) {
             if(!wall.getIsboundary()) {
                 this.path.add(new Wall(wall.getX(), wall.getY(), wall.getIsboundary()));
-                System.out.println("Added new wall (" + wall.getX() + ", " + wall.getY() + ", " + wall.getIsboundary() + ")");
             }
         }
 
-        System.out.println(this.path);
-
         return true;
+    }
+
+    public double findHeuristic(Wall wall) {
+        return -1.0;
+    }
+
+    public double findCost(Wall wall) {
+        return -1.0;
     }
 
     /**
