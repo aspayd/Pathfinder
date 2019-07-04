@@ -17,31 +17,37 @@ public class WallHandler {
     private int scale;
 
     private List<Wall> walls;
-    private List<Wall> boundries;
+    private List<Wall> boundaries;
     private Wall start;
     private Wall stop;
+
+    private List<Wall> path;
 
     public WallHandler(int width, int height, int scale) {
 
         this.width = width;
         this.height= height;
         this.scale = scale;
-        
+
+        boundaries = new ArrayList<>();
+        boundaries.add(new Wall(100, 150, true));
+        boundaries.add(new Wall(125, 150, true));
+        boundaries.add(new Wall(150, 150, true));
+        boundaries.add(new Wall(175, 150, true));
+        boundaries.add(new Wall(175, 125, true));
+
         // Generate the walls
         walls = new ArrayList<>();
         if(!generateWalls(walls)) {
             System.out.println("Failed to generate the walls");
         }
 
-        boundries = new ArrayList<>();
-        boundries.add(new Wall(100, 150, true));
-        boundries.add(new Wall(125, 150, true));
-        boundries.add(new Wall(150, 150, true));
-        boundries.add(new Wall(175, 150, true));
-        boundries.add(new Wall(175, 125, true));
 
         start = new Wall(0, 0, false);
         stop = new Wall(walls.get(walls.size() - 1).getX(), walls.get(walls.size() - 1).getY(), false);
+
+        path = new ArrayList<>();
+        findPath(walls);
     }
 
     /**
@@ -63,7 +69,14 @@ public class WallHandler {
                 if(y % (this.scale) == 0 && x % (this.scale) == 0) {
                     walls.add(new Wall(x, y, false));
                 }
+            }
+        }
 
+        for(Wall wall : walls) {
+            for(Wall boundary : boundaries) {
+                if(wall.getX() == boundary.getX() && wall.getY() == boundary.getY()) {
+                    wall.setIsboundary(true);
+                }
             }
         }
 
@@ -71,20 +84,44 @@ public class WallHandler {
     }
 
     /**
-     * Renders the walls in colors according to their type (i.g. start, stop, boundary)
+     * Finds the best path between the start and stop points based on the weighted values of each wall cell
+     *
+     * @param walls
+     * @return
+     */
+    public boolean findPath(List<Wall> walls) {
+
+        if(walls.isEmpty()) {
+            System.out.println("No grid was provided.");
+            return false;
+        }
+
+        for(Wall wall : this.walls) {
+            if(!wall.getIsboundary()) {
+                this.path.add(new Wall(wall.getX(), wall.getY(), wall.getIsboundary()));
+            }
+        }
+
+        return true;
+    }
+
+    public double findHeuristic(Wall wall) {
+        return -1.0;
+    }
+
+    public double findCost(Wall wall) {
+        return -1.0;
+    }
+
+    /**
+     * Renders the walls in colors according to their type (start, stop, boundary)
      *
      */
     public void render(Graphics g) {
 
         for(Wall wall : walls) {
 
-            for(Wall boundary : boundries) {
-                if(wall.getX() == boundary.getX() && wall.getY() == boundary.getY()) {
-                    wall.setIsboundary(true);
-                }
-            }
-
-            Color color = (wall.isboundary) ? Color.black : Color.white;
+            Color color = (wall.getIsboundary()) ? Color.black : Color.white;
 
             if(wall.getX() == start.getX() && wall.getY() == start.getY()) {
                 color = Color.green;
@@ -98,10 +135,6 @@ public class WallHandler {
             g.setColor(Color.gray);
             g.drawRect(wall.x, wall.y, this.scale, this.scale);
         }
-    }
-
-    public boolean sortWalls() {
-        return false;
     }
 
     private class Wall {
@@ -124,7 +157,7 @@ public class WallHandler {
             return y;
         }
 
-        public boolean isboundary() {
+        public boolean getIsboundary() {
             return isboundary;
         }
 

@@ -102,6 +102,7 @@ public class Main extends Canvas implements Runnable {
                 render();
 
                 frames++;
+
             } else {
                 try {
                     Thread.sleep(1);
