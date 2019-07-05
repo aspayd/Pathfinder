@@ -52,6 +52,7 @@ public class WallHandler {
 
     /**
      * Generate a list of walls for each cell on the grid
+     * If the wall is matched with a set boundary, it will be marked as a boundary
      *
      * @param walls             The list to add the walls into
      * @return                  Whether or not the walls were added
@@ -105,12 +106,17 @@ public class WallHandler {
         return true;
     }
 
-    public double findHeuristic(Wall wall) {
+    private double heuristic(Wall wall) {
         return -1.0;
     }
 
-    public double findCost(Wall wall) {
+    private double cost(Wall wall) {
         return -1.0;
+    }
+
+    private double distance(int x1, int x2, int y1, int y2) {
+        // @todo: make sure this is right
+        return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
 
     /**
