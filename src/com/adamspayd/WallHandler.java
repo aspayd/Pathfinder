@@ -42,7 +42,6 @@ public class WallHandler {
             System.out.println("Failed to generate the walls");
         }
 
-
         start = new Wall(0, 0, false);
         stop = new Wall(walls.get(walls.size() - 1).getX(), walls.get(walls.size() - 1).getY(), false);
 
@@ -76,7 +75,7 @@ public class WallHandler {
         for(Wall wall : walls) {
             for(Wall boundary : boundaries) {
                 if(wall.getX() == boundary.getX() && wall.getY() == boundary.getY()) {
-                    wall.setIsboundary(true);
+                    wall.setIsBoundary(true);
                 }
             }
         }
@@ -98,25 +97,13 @@ public class WallHandler {
         }
 
         for(Wall wall : this.walls) {
-            if(!wall.getIsboundary()) {
-                this.path.add(new Wall(wall.getX(), wall.getY(), wall.getIsboundary()));
+            if(!wall.getIsBoundary()) {
+                wall.setF(wall.heuristic(), wall.cost());
+                this.path.add(wall);
             }
         }
 
         return true;
-    }
-
-    private double heuristic(Wall wall) {
-        return -1.0;
-    }
-
-    private double cost(Wall wall) {
-        return -1.0;
-    }
-
-    private double distance(int x1, int x2, int y1, int y2) {
-        // @todo: make sure this is right
-        return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
 
     /**
@@ -124,10 +111,9 @@ public class WallHandler {
      *
      */
     public void render(Graphics g) {
-
         for(Wall wall : walls) {
 
-            Color color = (wall.getIsboundary()) ? Color.black : Color.white;
+            Color color = (wall.getIsBoundary()) ? Color.black : Color.white;
 
             if(wall.getX() == start.getX() && wall.getY() == start.getY()) {
                 color = Color.green;
@@ -141,18 +127,37 @@ public class WallHandler {
             g.setColor(Color.gray);
             g.drawRect(wall.x, wall.y, this.scale, this.scale);
         }
+
+        g.setFont(new Font("arial", Font.PLAIN, 10));
+        for(Wall wall : path) {
+            g.drawString(Double.toString(Math.round(wall.getF() * 10.0) / 10.0), (wall.getX() + this.scale/7), (wall.getY() + this.scale * 2/3));
+        }
     }
 
     private class Wall {
 
         private int x;
         private int y;
-        private boolean isboundary;
+        private double f;
+        private boolean isBoundary;
+
 
         public Wall(int x, int y, boolean isboundary) {
             this.x = x;
             this.y = y;
-            this.isboundary = isboundary;
+            this.isBoundary = isboundary;
+        }
+
+        private double distance(int x1, int y1, int x2, int y2) {
+            return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+        }
+
+        public double heuristic() {
+            return distance(x, y, stop.getX(), stop.getY()) / scale;
+        }
+
+        public double cost() {
+            return distance(x, y, start.getX(), start.getY()) / scale;
         }
 
         public int getX() {
@@ -163,12 +168,20 @@ public class WallHandler {
             return y;
         }
 
-        public boolean getIsboundary() {
-            return isboundary;
+        public boolean getIsBoundary() {
+            return isBoundary;
         }
 
-        public void setIsboundary(boolean isboundary) {
-            this.isboundary = isboundary;
+        public void setIsBoundary(boolean boundary) {
+            this.isBoundary = boundary;
+        }
+
+        public double getF() {
+            return f;
+        }
+
+        public void setF(double heuristic, double cost) {
+            this.f = heuristic + cost;
         }
     }
 }
