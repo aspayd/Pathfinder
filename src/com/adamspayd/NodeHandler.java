@@ -46,7 +46,7 @@ public class NodeHandler {
         stop = new Node(nodes.get(nodes.size() - 1).getX(), nodes.get(nodes.size() - 1).getY(), false);
 
         path = new ArrayList<>();
-        findPath(nodes);
+        findNodeCosts(nodes);
     }
 
     /**
@@ -89,10 +89,10 @@ public class NodeHandler {
      * @param nodes
      * @return
      */
-    public boolean findPath(List<Node> nodes) {
+    public boolean findNodeCosts(List<Node> nodes) {
 
         if(nodes.isEmpty()) {
-            System.out.println("No grid was provided.");
+            System.out.println("No nodes were provided.");
             return false;
         }
 
@@ -107,7 +107,12 @@ public class NodeHandler {
     }
 
     public void tick() {
+        ArrayList<Node> open_list = new ArrayList<>(this.path);
+        ArrayList<Node> closed_list = new ArrayList<>();
 
+        while(!open_list.isEmpty()) {
+            // Follow this tutorial: https://www.geeksforgeeks.org/a-search-algorithm/
+        }
     }
 
     /**
@@ -157,7 +162,8 @@ public class NodeHandler {
         }
 
         public double heuristic() {
-            return distance(x, y, stop.getX(), stop.getY()) / scale;
+            // Diagonal distance formula (h = max( abs(node.x - goal.x), abs(node.y - goal.y) )
+            return Math.max(Math.abs(this.x - stop.getX()), Math.abs(this.y - stop.getY())) / scale;
         }
 
         public double cost() {

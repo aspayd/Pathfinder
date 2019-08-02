@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a51f20b6-8c18-4075-a84d-46e8e4543533" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/WallHandler$Wall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/WallHandler$Wall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/WallHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/WallHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/adamspayd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/adamspayd/WallHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/adamspayd/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="187">
+              <caret line="101" column="42" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3090#3091#0" expanded="true" />
@@ -40,10 +38,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="542">
+              <caret line="113" column="46" lean-forward="true" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4657#4658#0" expanded="true" />
+                <element signature="e#4738#4739#0" expanded="true" />
+                <element signature="e#4767#4768#0" expanded="true" />
+                <element signature="e#4799#4800#0" expanded="true" />
+                <element signature="e#4828#4829#0" expanded="true" />
+                <element signature="e#4860#4861#0" expanded="true" />
+                <element signature="e#4902#4903#0" expanded="true" />
+                <element signature="e#4943#4944#0" expanded="true" />
+                <element signature="e#4998#4999#0" expanded="true" />
+                <element signature="e#5048#5049#0" expanded="true" />
+                <element signature="e#5080#5081#0" expanded="true" />
+                <element signature="e#5112#5113#0" expanded="true" />
+                <element signature="e#5171#5172#0" expanded="true" />
+                <element signature="e#5220#5221#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,11 +75,15 @@
       <find>Main</find>
       <find>window.get</find>
       <find>boundaries</find>
+      <find>Wall</find>
+      <find>wall</find>
+      <find>setF</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>boundary</replace>
       <replace>new Wall\(\d\d\d, \d\d\d, false\)\)\;</replace>
+      <replace>Node</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -91,10 +107,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1520" />
-    <option name="height" value="720" />
+    <option name="x" value="2206" />
+    <option name="y" value="161" />
+    <option name="width" value="1519" />
+    <option name="height" value="719" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -124,8 +140,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,10 +212,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.15369128" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.110341154" />
       <window_info id="Structure" order="1" sideWeight="0.500956" side_tool="true" weight="0.13959731" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -208,7 +224,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2592068" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19826652" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -253,8 +269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/adamspayd/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="765">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1057#1058#0" expanded="true" />
@@ -267,8 +283,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/adamspayd/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="187">
+          <caret line="101" column="42" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3090#3091#0" expanded="true" />
@@ -279,10 +295,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="542">
+          <caret line="113" column="46" lean-forward="true" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4657#4658#0" expanded="true" />
+            <element signature="e#4738#4739#0" expanded="true" />
+            <element signature="e#4767#4768#0" expanded="true" />
+            <element signature="e#4799#4800#0" expanded="true" />
+            <element signature="e#4828#4829#0" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4902#4903#0" expanded="true" />
+            <element signature="e#4943#4944#0" expanded="true" />
+            <element signature="e#4998#4999#0" expanded="true" />
+            <element signature="e#5048#5049#0" expanded="true" />
+            <element signature="e#5080#5081#0" expanded="true" />
+            <element signature="e#5112#5113#0" expanded="true" />
+            <element signature="e#5171#5172#0" expanded="true" />
+            <element signature="e#5220#5221#0" expanded="true" />
           </folding>
         </state>
       </provider>

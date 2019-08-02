@@ -97,9 +97,9 @@ public class Main extends Canvas implements Runnable {
 
             if(render) {
 
-                tick();
-
                 render();
+
+                // @todo main logic (tick)
 
                 frames++;
 
@@ -111,10 +111,6 @@ public class Main extends Canvas implements Runnable {
                 }
             }
         }
-    }
-
-    public void tick() {
-        // @todo: main logic
     }
 
     public void render() {
