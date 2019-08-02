@@ -13,7 +13,7 @@ public class Main extends Canvas implements Runnable {
 
     private Thread thread;
 
-    private WallHandler wh;
+    private NodeHandler nh;
 
     private Window window;
 
@@ -34,7 +34,7 @@ public class Main extends Canvas implements Runnable {
         width = window.getWidth();
         height = window.getHeight();
 
-        wh = new WallHandler(width, height, gridScale);
+        nh = new NodeHandler(width, height, gridScale);
 
         start();
     }
@@ -97,9 +97,9 @@ public class Main extends Canvas implements Runnable {
 
             if(render) {
 
-                tick();
-
                 render();
+
+                // @todo main logic (tick)
 
                 frames++;
 
@@ -111,10 +111,6 @@ public class Main extends Canvas implements Runnable {
                 }
             }
         }
-    }
-
-    public void tick() {
-        // @todo: main logic
     }
 
     public void render() {
@@ -130,7 +126,7 @@ public class Main extends Canvas implements Runnable {
 
         if(drawGrid) {
 
-            wh.render(g);
+            nh.render(g);
 
             drawGrid = false;
         }
