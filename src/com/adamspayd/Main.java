@@ -92,8 +92,6 @@ public class Main extends Canvas implements Runnable {
                     fps = frames;
                     frames = 0;
                     System.out.println("FPS: " +  fps);
-
-                    drawGrid = true;
                 }
             }
 
