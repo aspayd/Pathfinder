@@ -6,7 +6,15 @@ package com.adamspayd;
  * @author Adam
  * @since 8/1/2019
  */
-public class Node {
+public class Node implements Comparable<Node> {
+
+    @Override
+    public int compareTo(Node n) {
+        if(this.getX() == n.getX() && this.getY() == n.getY()) {
+            return 0;
+        }
+        return -1;
+    }
 
     private int x;
     private int y;

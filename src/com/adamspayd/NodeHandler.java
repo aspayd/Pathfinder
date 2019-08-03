@@ -1,6 +1,7 @@
 package com.adamspayd;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,8 +27,8 @@ public class NodeHandler {
         this.height= height;
         this.scale = scale;
 
-        // @todo: add a method to do this in the `NodeList` class
-        boundaries = new NodeList<>();
+        // @todo: add a method to do this in the `ArrayList` class
+        boundaries = new ArrayList<>();
         boundaries.add(new Node(100, 150, true));
         boundaries.add(new Node(125, 150, true));
         boundaries.add(new Node(150, 150, true));
@@ -35,7 +36,7 @@ public class NodeHandler {
         boundaries.add(new Node(175, 125, true));
 
         // Generate the nodes
-        nodes = new NodeList<>();
+        nodes = new ArrayList<>();
         if(!generateNodes(nodes)) {
             System.out.println("Failed to generate the nodes");
         }
@@ -43,7 +44,7 @@ public class NodeHandler {
         start = new Node(0, 0, false);
         stop = new Node(nodes.get(nodes.size() - 1).getX(), nodes.get(nodes.size() - 1).getY(), false);
 
-        path = new NodeList<>();
+        path = new ArrayList<>();
         findNodeCosts(nodes);
     }
 
@@ -105,8 +106,8 @@ public class NodeHandler {
     }
 
     public void tick() {
-        NodeList<Node> open_list = new NodeList<>();
-        NodeList<Node> closed_list = new NodeList<>();
+        ArrayList<Node> open_list = new ArrayList<>();
+        ArrayList<Node> closed_list = new ArrayList<>();
 
         while(!open_list.isEmpty()) {
             // Follow this tutorial: https://www.geeksforgeeks.org/a-search-algorithm/
