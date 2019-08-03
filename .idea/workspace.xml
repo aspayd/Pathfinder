@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a51f20b6-8c18-4075-a84d-46e8e4543533" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/adamspayd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,72 +16,12 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/adamspayd/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="101" column="42" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3090#3091#0" expanded="true" />
-                <element signature="e#3116#3117#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="113" column="46" lean-forward="true" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4657#4658#0" expanded="true" />
-                <element signature="e#4738#4739#0" expanded="true" />
-                <element signature="e#4767#4768#0" expanded="true" />
-                <element signature="e#4799#4800#0" expanded="true" />
-                <element signature="e#4828#4829#0" expanded="true" />
-                <element signature="e#4860#4861#0" expanded="true" />
-                <element signature="e#4902#4903#0" expanded="true" />
-                <element signature="e#4943#4944#0" expanded="true" />
-                <element signature="e#4998#4999#0" expanded="true" />
-                <element signature="e#5048#5049#0" expanded="true" />
-                <element signature="e#5080#5081#0" expanded="true" />
-                <element signature="e#5112#5113#0" expanded="true" />
-                <element signature="e#5171#5172#0" expanded="true" />
-                <element signature="e#5220#5221#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Main</find>
-      <find>window.get</find>
-      <find>boundaries</find>
-      <find>Wall</find>
-      <find>wall</find>
-      <find>setF</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>boundary</replace>
-      <replace>new Wall\(\d\d\d, \d\d\d, false\)\)\;</replace>
-      <replace>Node</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -93,57 +30,8 @@
     <setting file="file://$PROJECT_DIR$/src/com/adamspayd/Main.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/adamspayd/FrameLayout.form" />
-        <option value="$PROJECT_DIR$/src/com/adamspayd/FrameLayout.java" />
-        <option value="$PROJECT_DIR$/src/com/adamspayd/Window.java" />
-        <option value="$PROJECT_DIR$/src/com/adamspayd/WallHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/adamspayd/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2206" />
-    <option name="y" value="161" />
-    <option name="width" value="1519" />
-    <option name="height" value="719" />
-  </component>
+  <component name="ProjectId" id="1Ot6fexSoTEv7uCccnoSZ0PBIgi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Pathfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pathfinder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pathfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pathfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pathfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pathfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="adamspayd" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -151,7 +39,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -211,112 +99,28 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.110341154" />
-      <window_info id="Structure" order="1" sideWeight="0.500956" side_tool="true" weight="0.13959731" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19826652" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.33144477" />
-      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/adamspayd/FrameLayout.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/adamspayd/FrameLayout.form" />
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="178" selection-start-line="178" selection-end-line="178" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="1484" column="49" lean-forward="true" selection-start-line="1484" selection-start-column="49" selection-end-line="1484" selection-end-column="49" />
-          <folding>
-            <element signature="e#57191#57192#0" expanded="true" />
-            <element signature="e#57255#57256#0" expanded="true" />
-            <element signature="e#57833#57834#0" expanded="true" />
-            <element signature="e#57889#57890#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/adamspayd/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1163#1164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/adamspayd/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="101" column="42" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3090#3091#0" expanded="true" />
-            <element signature="e#3116#3117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="113" column="46" lean-forward="true" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4657#4658#0" expanded="true" />
-            <element signature="e#4738#4739#0" expanded="true" />
-            <element signature="e#4767#4768#0" expanded="true" />
-            <element signature="e#4799#4800#0" expanded="true" />
-            <element signature="e#4828#4829#0" expanded="true" />
-            <element signature="e#4860#4861#0" expanded="true" />
-            <element signature="e#4902#4903#0" expanded="true" />
-            <element signature="e#4943#4944#0" expanded="true" />
-            <element signature="e#4998#4999#0" expanded="true" />
-            <element signature="e#5048#5049#0" expanded="true" />
-            <element signature="e#5080#5081#0" expanded="true" />
-            <element signature="e#5112#5113#0" expanded="true" />
-            <element signature="e#5171#5172#0" expanded="true" />
-            <element signature="e#5220#5221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/ArrayList.java</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

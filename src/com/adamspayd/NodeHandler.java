@@ -5,10 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Pathfinder
- *
- * @author Adam
- * @since 6/26/2019
+ * Class to manage all 'nodes'
+ * e.i. this is where the nodes are processed to find the best path
  */
 public class NodeHandler {
 
@@ -29,6 +27,7 @@ public class NodeHandler {
         this.height= height;
         this.scale = scale;
 
+        // @todo: add a method to do this in the `ArrayList` class
         boundaries = new ArrayList<>();
         boundaries.add(new Node(100, 150, true));
         boundaries.add(new Node(125, 150, true));
@@ -98,7 +97,7 @@ public class NodeHandler {
 
         for(Node node : this.nodes) {
             if(!node.getIsBoundary()) {
-                node.setF(node.heuristic(), node.cost());
+                node.setF(node.heuristic(stop.getX(), stop.getY()) / this.scale, node.cost(start.getX(), start.getY()) / this.scale);
                 this.path.add(node);
             }
         }
@@ -107,7 +106,7 @@ public class NodeHandler {
     }
 
     public void tick() {
-        ArrayList<Node> open_list = new ArrayList<>(this.path);
+        ArrayList<Node> open_list = new ArrayList<>();
         ArrayList<Node> closed_list = new ArrayList<>();
 
         while(!open_list.isEmpty()) {
@@ -131,67 +130,15 @@ public class NodeHandler {
             }
 
             g.setColor(color);
-            g.fillRect(node.x, node.y, this.scale, this.scale);
+            g.fillRect(node.getX(), node.getY(), this.scale, this.scale);
 
             g.setColor(Color.gray);
-            g.drawRect(node.x, node.y, this.scale, this.scale);
+            g.drawRect(node.getX(), node.getY(), this.scale, this.scale);
         }
 
         g.setFont(new Font("arial", Font.PLAIN, 10));
         for(Node node : path) {
             g.drawString(Double.toString(Math.round(node.getF() * 10.0) / 10.0), (node.getX() + this.scale/7), (node.getY() + this.scale * 2/3));
-        }
-    }
-
-    private class Node {
-
-        private int x;
-        private int y;
-        private double f;
-        private boolean isBoundary;
-
-
-        public Node(int x, int y, boolean isboundary) {
-            this.x = x;
-            this.y = y;
-            this.isBoundary = isboundary;
-        }
-
-        private double distance(int x1, int y1, int x2, int y2) {
-            return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
-        }
-
-        public double heuristic() {
-            // Diagonal distance formula (h = max( abs(node.x - goal.x), abs(node.y - goal.y) )
-            return Math.max(Math.abs(this.x - stop.getX()), Math.abs(this.y - stop.getY())) / scale;
-        }
-
-        public double cost() {
-            return distance(x, y, start.getX(), start.getY()) / scale;
-        }
-
-        public int getX() {
-            return x;
-        }
-
-        public int getY() {
-            return y;
-        }
-
-        public boolean getIsBoundary() {
-            return isBoundary;
-        }
-
-        public void setIsBoundary(boolean boundary) {
-            this.isBoundary = boundary;
-        }
-
-        public double getF() {
-            return f;
-        }
-
-        public void setF(double heuristic, double cost) {
-            this.f = heuristic + cost;
         }
     }
 }
