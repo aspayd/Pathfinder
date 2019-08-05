@@ -1,43 +1,116 @@
 package com.adamspayd;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+
 /**
  * Pathfinder
  *
  * @author Adam
  * @since 8/1/2019
  */
-public class Node implements Comparable<Node> {
+public class Node implements Comparable, Comparator<Node> {
 
     @Override
-    public int compareTo(Node n) {
-        if(this.getX() == n.getX() && this.getY() == n.getY()) {
+    public int compareTo(Object o) {
+        if(this.equals(o)) {
             return 0;
         }
-        return -1;
+
+        Node n = (Node) o;
+
+//        return this.getF() < n.getF() ? -1 : 1;
+        return Double.compare(this.getF(), n.getF());
+    }
+
+    @Override
+    public int compare(Node o1, Node o2) {
+        if(o1.getF() == o2.getF()) {
+            return 0;
+        }
+
+        return o1.getF() < o2.getF() ? -1 : 1;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if(this == o) {
+            return true;
+        }
+
+        if(!(o instanceof Node)) {
+            return false;
+        }
+
+        Node n = (Node) o;
+
+        return (
+                this.getX() == n.getX() &&
+                this.getY() == n.getY() &&
+                this.getIsBoundary() == n.getIsBoundary()
+        );
     }
 
     private int x;
     private int y;
+
     private double f;
+    private double h;
+    private double g;
+
     private boolean isBoundary;
+
+    private ArrayList<Node> neighbors;
+    private Node parent;
+
+    public Node getParent() {
+        return parent;
+    }
+
+    public void setParent(Node parent) {
+        this.parent = parent;
+    }
 
     public Node(int x, int y, boolean isboundary) {
         this.x = x;
         this.y = y;
         this.isBoundary = isboundary;
+
+        neighbors = new ArrayList<>();
     }
 
-    private double distance(int x1, int y1, int x2, int y2) {
+    public double diagonalDistance(int x1, int y1, int x2, int y2) {
+        return Math.max(Math.abs(x2 - x1), Math.abs(y2 - y1));
+    }
+
+    public double distance(int x1, int y1, int x2, int y2) {
         return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
 
-    public double heuristic(int stopX, int stopY) {
-        // Diagonal distance formula (h = max( abs(node.x - goal.x), abs(node.y - goal.y) )
-        return Math.max(Math.abs(this.x - stopX), Math.abs(this.y - stopY));
+    public void findNeighbors(ArrayList<Node> nodes, int scale) {
+        int[] indexes = {
+                nodes.indexOf(new Node(x - scale, y - scale, false)),
+                nodes.indexOf(new Node(x - scale, y, false)),
+                nodes.indexOf(new Node(x - scale, y + scale, false)),
+                nodes.indexOf(new Node(x, y - scale, false)),
+                nodes.indexOf(new Node(x, y + scale, false)),
+                nodes.indexOf(new Node(x + scale, y - scale, false)),
+                nodes.indexOf(new Node(x + scale, y, false)),
+                nodes.indexOf(new Node(x + scale, y + scale, false))
+        };
+
+        for (int idx : indexes) {
+            if(idx >= 0) {
+                if(nodes.get(idx).getX() == 0 && nodes.get(idx).getY() == 0) {
+                    continue;
+                }
+                neighbors.add(nodes.get(idx));
+            }
+        }
     }
 
-    public double cost(int startX, int startY) {
-        return distance(x, y, startX, startY);
+    public ArrayList<Node> getNeighbors() {
+        return neighbors;
     }
 
     public int getX() {
@@ -60,7 +133,23 @@ public class Node implements Comparable<Node> {
         return f;
     }
 
-    public void setF(double heuristic, double cost) {
-        this.f = heuristic + cost;
+    public void setF(double heuristic, double g) {
+        this.f = heuristic + g;
+    }
+
+    public double getH() {
+        return h;
+    }
+
+    public void setH(double h) {
+        this.h = h;
+    }
+
+    public double getG() {
+        return g;
+    }
+
+    public void setG(double g) {
+        this.g = g;
     }
 }

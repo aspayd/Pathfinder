@@ -21,7 +21,7 @@ public class Main extends Canvas implements Runnable {
     private int width, height;
 
     private int gridScale = 25;
-    private boolean drawGrid;
+    public static boolean drawGrid;
 
     private boolean running = false;
     private String title = "A* Pathfinder";
