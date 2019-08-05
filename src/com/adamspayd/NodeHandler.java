@@ -37,7 +37,6 @@ public class NodeHandler {
 
         // Set the walls
         int[] indexes = {
-                nodes.indexOf(new Node(100, 150, false)),
                 nodes.indexOf(new Node(125, 150, false)),
                 nodes.indexOf(new Node(150, 150, false)),
                 nodes.indexOf(new Node(175, 150, false)),
@@ -196,7 +195,9 @@ public class NodeHandler {
 
         g.setColor(Color.orange);
         for(Node n : solution) {
-            g.fillRect(n.getX(), n.getY(), this.scale, this.scale);
+            if(!n.equals(start)) {
+                g.fillRect(n.getX(), n.getY(), this.scale, this.scale);
+            }
         }
 
         g.setFont(new Font("arial", Font.PLAIN, 10));

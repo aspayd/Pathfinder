@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a51f20b6-8c18-4075-a84d-46e8e4543533" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pathfinder/com/adamspayd/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/adamspayd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/adamspayd/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,7 +122,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/adamspayd/NodeHandler.java</url>
-          <line>132</line>
+          <line>130</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
