@@ -126,7 +126,6 @@ public class NodeHandler {
             for (Node neighbor : q.getNeighbors()) {
                 // Check to see if the goal has been reached
                 if(neighbor.equals(stop)) {
-//                if(neighbor.getX() == stop.getX() && neighbor.getY() == stop.getY()) {
                     // Stop the search
                     end = true;
                     closed_list.add(q);
@@ -193,7 +192,7 @@ public class NodeHandler {
             g.drawRect(node.getX(), node.getY(), this.scale, this.scale);
         }
 
-        g.setColor(Color.orange);
+        g.setColor(Color.lightGray);
         for(Node n : solution) {
             if(!n.equals(start)) {
                 g.fillRect(n.getX(), n.getY(), this.scale, this.scale);

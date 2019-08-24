@@ -19,7 +19,6 @@ public class Node implements Comparable, Comparator<Node> {
 
         Node n = (Node) o;
 
-//        return this.getF() < n.getF() ? -1 : 1;
         return Double.compare(this.getF(), n.getF());
     }
 
